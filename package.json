@@ -6,10 +6,16 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "postbuild": "node scripts/optimize-dist.js",
+    "preview": "astro preview",
+    "analyze": "node scripts/analyze-dist.js"
   },
   "dependencies": {
     "astro": "^5.0.0",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "sharp": "^0.33.0"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "^3.1.0"
   }
 }
