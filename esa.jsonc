@@ -1,10 +1,9 @@
 {
   "name": "icon-manager",
-  "installCommand": "npm install",
-  "buildCommand": "npm run build",
+  "installCommand": "npm ci --production", // 使用 npm ci 更快更可靠，只安装生产依赖
+  "buildCommand": "npm run build && npm run postbuild", // 构建后执行清理
   "assets": {
     "directory": "./dist",
     "notFoundStrategy": "404Page"
   }
 }
-
